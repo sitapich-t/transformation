@@ -79,15 +79,9 @@
         let rot_x = 0, rot_y = 0, rot_z = 0;
         // ✅ render loop
         function animate(t) {
-<<<<<<< HEAD
-            cube.rotation.x = t * rot_x;
-            cube.rotation.y = t * rot_y;
-            cube.rotation.z = t * rot_z;
-=======
-            cube.rotation.y = t * 0.001;
-            cube.rotation.z = t * 0.001 ;
->>>>>>> b2298693158e4f3c62840aa38ebdf3ddfef064dd
-
+            cube.rotation.x = t * 0.001;
+            cube.rotation.z = t * 0.001;
+            
             sphere.rotation.y = t * 0.001;
 
             renderer.render(scene, camera);
@@ -101,12 +95,6 @@
             else if (event.key === 's') cube.position.y += -0.2;
             if (event.key === 'a') cube.position.x += -0.2;
             else if (event.key === 'd') cube.position.x += 0.2;
-        });
-
-        window.addEventListener('keyup', (event) => {
-            if (event.key === '1') rot_x = t * 0.001;
-            else if (event.key === '2') rot_y = t * 0.001;
-            else if (event.key === '3') rot_z = t * 0.001;
         });
     </script>
 </body>
